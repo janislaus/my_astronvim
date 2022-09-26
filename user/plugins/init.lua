@@ -7,4 +7,6 @@ return {
   ["tpope/vim-surround"] = {},
   ["machakann/vim-highlightedyank"] = {},
   ["ggandor/lightspeed.nvim"] = {},
+  ["tpope/vim-repeat"] = {},
+  ["Mofiqul/dracula.nvim"] = {},
 }

@@ -32,5 +32,15 @@ return {
     },
     -- Neotree
     ["-"] = { ":Neotree toggle<cr>", desc = "Toggle Neotree"},
+
+    ["<leader>0"] = {"<C-^>"}, --alternate file remapping
+  },
+
+  x = {
+      ["<Leader>p"] = {"_dP"}, --value_serializer=lambda m: json.dumps(m).encode('utf-8')
+  },
+  v = {
+  ["<"] = {"<gv"}, --Reselect visual selection after indenting
+  [">"] = {">gv"}, 
   },
 }
