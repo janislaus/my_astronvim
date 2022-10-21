@@ -11,4 +11,6 @@ return {
   ["tpope/vim-repeat"] = {},
   ["Mofiqul/dracula.nvim"] = {},
   ["christoomey/vim-tmux-navigator"] = {},
+  ["psliwka/vim-smoothie"] = {},
+  ["nvim-treesitter/nvim-treesitter-textobjects"] = { after = "nvim-treesitter" },
 }

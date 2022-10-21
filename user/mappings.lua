@@ -31,16 +31,18 @@ return {
       desc = "Harpoon file 5",
     },
     -- Neotree
-    ["-"] = { ":Neotree toggle<cr>", desc = "Toggle Neotree"},
+    ["-"] = { ":Neotree toggle<cr>", desc = "Toggle Neotree" },
+    -- -- Hop
+    -- ["s"] = { ":HopChar2 <cr>", desc = "Hop to position" },
 
-    ["<leader>0"] = {"<C-^>"}, --alternate file remapping
+    ["<leader>0"] = { "<C-^>" }, --alternate file remapping
   },
 
   x = {
-      ["<Leader>p"] = {"_dP"}, --value_serializer=lambda m: json.dumps(m).encode('utf-8')
+    ["<Leader>p"] = { "_dP" }, --value_serializer=lambda m: json.dumps(m).encode('utf-8')
   },
   v = {
-  ["<"] = {"<gv"}, --Reselect visual selection after indenting
-  [">"] = {">gv"}, 
+    ["<"] = { "<gv" }, --Reselect visual selection after indenting
+    [">"] = { ">gv" },
   },
 }
