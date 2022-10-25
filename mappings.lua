@@ -32,8 +32,6 @@ return {
     },
     -- Neotree
     ["-"] = { ":Neotree toggle<cr>", desc = "Toggle Neotree" },
-    -- -- Hop
-    -- ["s"] = { ":HopChar2 <cr>", desc = "Hop to position" },
 
     ["<leader>0"] = { "<C-^>" }, --alternate file remapping
   },
