@@ -1,1 +1,4 @@
-return "dracula"
+-- return "dracula"
+-- the line above is commented out but can be found in polish.lua needed,
+-- astronvim does set the colorscheme first by default which works for most
+-- colorschemes, but not for dracula.
