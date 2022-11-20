@@ -1,3 +1,16 @@
+-- Quickfix open/close functionality
+QuickFixFlag = false
+
+function ToggleQuickFix()
+  if QuickFixFlag then
+    QuickFixFlag = false
+    vim.cmd("cclose")
+  else
+    QuickFixFlag = true
+    vim.cmd("copen")
+  end
+end
+
 return {
   n = {
     -- Harpoon
@@ -33,11 +46,18 @@ return {
     -- Neotree
     ["-"] = { ":Neotree toggle<cr>", desc = "Toggle Neotree" },
 
+    -- misc
+    ["<leader>j"] = { function() vim.cmd("cnext") end },
+    ["<leader>k"] = { function() vim.cmd("cprev") end },
+
     ["<leader>0"] = { "<C-^>" }, --alternate file remapping
+
+    ["<C-q>"] = { function() ToggleQuickFix() end, desc = "Toggle quickfix window" },
+
   },
 
   x = {
-    ["<Leader>p"] = { "_dP" }, --value_serializer=lambda m: json.dumps(m).encode('utf-8')
+    ["<Leader>p"] = { "_dP" }, --copy last yank
   },
   v = {
     ["<"] = { "<gv" }, --Reselect visual selection after indenting
