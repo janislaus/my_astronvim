@@ -31,9 +31,9 @@ return {
       enable = true,
       lookahead = true,
       keymaps = {
-        ["of"] = "@function.outer",
+        ["af"] = "@function.outer",
         ["if"] = "@function.inner",
-        ["oc"] = "@class.outer",
+        ["ac"] = "@class.outer",
         ["ic"] = "@class.inner",
       },
     },

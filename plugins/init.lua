@@ -15,10 +15,19 @@ return {
   ["psliwka/vim-smoothie"] = {},
   ["nvim-treesitter/nvim-treesitter-textobjects"] = {
     after = "nvim-treesitter",
-    config = require "user.plugins.treesitter"
+    config = function() require "user.plugins.treesitter" end,
   },
-  ["Mofiqul/dracula.nvim"] = { config = require "user.plugins.dracula" },
-  -- ["hrsh7th/nvim-cmp"] = { config = require "user.plugins.cmp" },
+  ["Mofiqul/dracula.nvim"] = { config = function() require "user.plugins.dracula" end },
+  ["hrsh7th/cmp-buffer"] = {},
+  ["hrsh7th/cmp-path"] = {},
+  ["hrsh7th/cmp-cmdline"] = {},
+  ["hrsh7th/cmp-nvim-lsp-signature-help"] = {},
+  ["sindrets/diffview.nvim"] = { requires = "nvim-lua/plenary.nvim" },
+  ["nvim-neotest/neotest"] = { requires = {
+    "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter"
+  },
+    config = function() require "user.plugins.neotest" end
+  },
   ["iamcco/markdown-preview.nvim"] = { run = "cd app && npm install",
     setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, },
 }
